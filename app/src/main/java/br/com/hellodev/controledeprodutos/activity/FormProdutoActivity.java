@@ -1,11 +1,14 @@
-package br.com.hellodev.controledeprodutos;
+package br.com.hellodev.controledeprodutos.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import br.com.hellodev.controledeprodutos.model.Produto;
+import br.com.hellodev.controledeprodutos.ProdutoDAO;
+import br.com.hellodev.controledeprodutos.R;
 
 public class FormProdutoActivity extends AppCompatActivity {
 

@@ -20,4 +20,8 @@
         <item name="android:tint">#FFFFFF</item>
     </style>
 
+    <style name="theme.Splash.Activity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#FFFFFF</item>
+    </style>
+
 </resources>

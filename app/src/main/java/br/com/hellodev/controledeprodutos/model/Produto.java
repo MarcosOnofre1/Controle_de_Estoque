@@ -1,4 +1,4 @@
-package br.com.hellodev.controledeprodutos;
+package br.com.hellodev.controledeprodutos.model;
 
 import java.io.Serializable;
 

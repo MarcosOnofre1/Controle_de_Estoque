@@ -1,4 +1,4 @@
-package br.com.hellodev.controledeprodutos;
+package br.com.hellodev.controledeprodutos.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,13 @@ import com.tsuryo.swipeablerv.SwipeableRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.com.hellodev.controledeprodutos.adapter.AdapterProduto;
+import br.com.hellodev.controledeprodutos.autencacao.LoginActivity;
+import br.com.hellodev.controledeprodutos.helper.FirebaseHelper;
+import br.com.hellodev.controledeprodutos.model.Produto;
+import br.com.hellodev.controledeprodutos.ProdutoDAO;
+import br.com.hellodev.controledeprodutos.R;
 
 public class MainActivity extends AppCompatActivity implements AdapterProduto.OnClick {
 
@@ -67,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
             popupMenu.setOnMenuItemClickListener(menuItem -> {
                 if (menuItem.getItemId() == R.id.menu_sobre) {
                     Toast.makeText(this, "Sobre", Toast.LENGTH_SHORT).show();
+                } else if (menuItem.getItemId() == R.id.menu_sair) {
+                    FirebaseHelper.getAuth().signOut();
+                    startActivity(new Intent(this, LoginActivity.class));
                 }
                 return true;
             });

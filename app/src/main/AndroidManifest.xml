@@ -12,10 +12,35 @@
         android:theme="@style/Theme.ControleDeProdutos"
         tools:targetApi="31">
         <activity
-            android:name=".FormProdutoActivity"
+            android:name=".autencacao.RecuperarContaActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/theme.Splash.Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".autencacao.CriarContaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".autencacao.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.FormProdutoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

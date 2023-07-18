@@ -1,4 +1,4 @@
-package br.com.hellodev.controledeprodutos;
+package br.com.hellodev.controledeprodutos.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import br.com.hellodev.controledeprodutos.R;
+import br.com.hellodev.controledeprodutos.model.Produto;
 
 public class AdapterProduto extends RecyclerView.Adapter<AdapterProduto.MyViewHolder> {
 
