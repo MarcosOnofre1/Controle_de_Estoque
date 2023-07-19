@@ -1,20 +1,38 @@
 package br.com.hellodev.controledeprodutos.model;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.Serializable;
+
+import br.com.hellodev.controledeprodutos.helper.FirebaseHelper;
 
 public class Produto implements Serializable {
 
 
-    private int id;
+    private String id;
     private String nome;
     private int estoque;
     private double valor;
 
-    public int getId() {
+    public Produto() {
+        DatabaseReference reference = FirebaseHelper.getDatabaseReference();
+        this.setId(reference.push().getKey());
+    }
+
+    public void salvarProduto() {
+        DatabaseReference reference = FirebaseHelper.getDatabaseReference()
+                .child("produtos")
+                .child(FirebaseHelper.getIdFirebase())
+                .child(this.id);
+        reference.setValue(this);
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

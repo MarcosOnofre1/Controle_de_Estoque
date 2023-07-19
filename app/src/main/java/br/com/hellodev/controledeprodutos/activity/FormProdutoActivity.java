@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import br.com.hellodev.controledeprodutos.model.Produto;
-import br.com.hellodev.controledeprodutos.ProdutoDAO;
 import br.com.hellodev.controledeprodutos.R;
 
 public class FormProdutoActivity extends AppCompatActivity {
@@ -15,8 +14,6 @@ public class FormProdutoActivity extends AppCompatActivity {
     private EditText edit_produto;
     private EditText edit_quantidade;
     private EditText edit_preco;
-
-    private ProdutoDAO produtoDAO;
 
     private Produto produto;
 
@@ -26,7 +23,6 @@ public class FormProdutoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_produto);
 
-        produtoDAO = new ProdutoDAO(this);
 
         edit_produto = findViewById(R.id.edit_produto);
         edit_quantidade = findViewById(R.id.edit_quantidade);
@@ -73,13 +69,9 @@ public class FormProdutoActivity extends AppCompatActivity {
                             produto.setEstoque(qtd);
                             produto.setValor(valorProduto);
 
-                            if (produto.getId() != 0){
-                                produtoDAO.atualizaProduto(produto);
-                            }else{
-                                produtoDAO.salvarProduto(produto);
-                            }
+                            produto.salvarProduto();
 
-                                finish();
+                            finish();
 
                         } else {
 
