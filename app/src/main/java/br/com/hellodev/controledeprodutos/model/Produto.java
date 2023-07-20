@@ -28,6 +28,14 @@ public class Produto implements Serializable {
         reference.setValue(this);
     }
 
+    public void deletaProduto(){
+        DatabaseReference reference = FirebaseHelper.getDatabaseReference()
+                .child("produtos")
+                .child(FirebaseHelper.getIdFirebase())
+                .child(this.id);
+        reference.removeValue();
+    }
+
     public String getId() {
         return id;
     }
