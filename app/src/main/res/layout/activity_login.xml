@@ -39,6 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:hint="Seu e-mail"
                 android:inputType="textEmailAddress"
                 android:padding="16dp" />
@@ -56,6 +58,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Sua senha"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:inputType="textPassword"
                 android:padding="16dp" />
 
@@ -66,6 +70,7 @@
                 android:onClick="logar"
                 android:padding="12dp"
                 android:text="Logar"
+                android:textColor="@color/white"
                 android:textAllCaps="false"/>
 
             <LinearLayout

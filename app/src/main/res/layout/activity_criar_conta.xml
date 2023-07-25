@@ -42,6 +42,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Seu nome"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:padding="16dp" />
 
             <TextView
@@ -57,6 +59,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Seu e-mail"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:padding="16dp" />
 
@@ -73,6 +77,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Sua senha"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="textPassword"
                 android:padding="16dp" />
 
@@ -83,6 +89,7 @@
                 android:onClick="validaDados"
                 android:padding="12dp"
                 android:text="Criar conta"
+                android:textColor="@color/white"
                 android:textAllCaps="false"/>
 
 

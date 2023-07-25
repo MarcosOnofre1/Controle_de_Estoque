@@ -32,6 +32,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Seu e-mail"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:padding="16dp"
                 tools:ignore="HardcodedText" />
@@ -43,6 +45,7 @@
                 android:padding="12dp"
                 android:onClick="recuperarSenha"
                 android:text="Recuperar Senha"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 tools:ignore="HardcodedText" />
 

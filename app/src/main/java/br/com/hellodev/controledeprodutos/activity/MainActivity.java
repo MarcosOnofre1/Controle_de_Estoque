@@ -49,11 +49,13 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ouvinteCliques();
+
+        iniciaComponentes();
 
         configRecyclerView();
 
-        iniciaComponentes();
+        ouvinteCliques();
+
 
     }
 
@@ -154,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
         } else {
             text_info.setVisibility(View.GONE);
         }
-        text_info.setVisibility(View.GONE);
+        progressBar.setVisibility(View.GONE);
 
     }
 
