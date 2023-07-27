@@ -2,6 +2,7 @@ package br.com.hellodev.controledeprodutos.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
@@ -66,11 +67,12 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
         recuperaProdutos();
     }
 
+    // AQUI ESTA RECUPERANDO O PRODUTO EM TEMPO REAL
     private void recuperaProdutos() {
         DatabaseReference produtosRef = FirebaseHelper.getDatabaseReference()
                 .child("produtos")
                 .child(FirebaseHelper.getIdFirebase());
-        produtosRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        produtosRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 produtoList.clear();

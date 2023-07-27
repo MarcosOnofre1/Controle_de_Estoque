@@ -1,7 +1,10 @@
 package br.com.hellodev.controledeprodutos.model;
 
+import android.telephony.mbms.StreamingServiceInfo;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.StorageReference;
 
 import java.io.Serializable;
 
@@ -14,6 +17,7 @@ public class Produto implements Serializable {
     private String nome;
     private int estoque;
     private double valor;
+    private String urlImagem;
 
     public Produto() {
         DatabaseReference reference = FirebaseHelper.getDatabaseReference();
@@ -34,6 +38,13 @@ public class Produto implements Serializable {
                 .child(FirebaseHelper.getIdFirebase())
                 .child(this.id);
         reference.removeValue();
+
+        StorageReference storageReference = FirebaseHelper.getStorageReference()
+                .child("Imagens")
+                .child("produtos")
+                .child(FirebaseHelper.getIdFirebase())
+                .child(this.id + ".jpeg");
+        storageReference.delete();
     }
 
     public String getId() {
@@ -66,5 +77,13 @@ public class Produto implements Serializable {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public String getUrlImagem() {
+        return urlImagem;
+    }
+
+    public void setUrlImagem(String urlImagem) {
+        this.urlImagem = urlImagem;
     }
 }
