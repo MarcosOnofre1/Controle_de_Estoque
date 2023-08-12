@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.storage.StorageReference;
@@ -199,6 +200,9 @@ public class FormProdutoActivity extends AppCompatActivity {
         edit_quantidade = findViewById(R.id.edit_quantidade);
         edit_preco = findViewById(R.id.edit_preco);
         imagem_produto = findViewById(R.id.imagem_produto);
+
+        TextView text_titulo = findViewById(R.id.text_titulo);
+        text_titulo.setText("Novo Produto");
 
     }
 
