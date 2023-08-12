@@ -1,11 +1,15 @@
 package br.com.hellodev.controledeprodutos.autencacao;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.hellodev.controledeprodutos.R;
@@ -26,6 +30,8 @@ public class RecuperarContaActivity extends AppCompatActivity {
 
     }
 
+
+
     public void recuperarSenha(View view) {
         String email = edit_email.getText().toString().trim();
 
@@ -39,6 +45,7 @@ public class RecuperarContaActivity extends AppCompatActivity {
             edit_email.requestFocus();
             edit_email.setError("Informe seu email.");
         }
+
     }
 
     private void enviaEmail(String email) {
@@ -60,6 +67,7 @@ public class RecuperarContaActivity extends AppCompatActivity {
     private void iniciaComponentes() {
         edit_email = findViewById(R.id.edit_email);
         progressBar = findViewById(R.id.progressBar);
+
     }
 
 }

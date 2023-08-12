@@ -23,12 +23,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include3">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
             android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/image_recuperar"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:paddingBottom="12dp"
+                android:src="@drawable/ic_circulo"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -42,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Seu nome"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/material_dynamic_neutral40"
                 android:textColor="@color/black"
                 android:padding="16dp" />
 
@@ -59,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Seu e-mail"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/material_dynamic_neutral40"
                 android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:padding="16dp" />
@@ -77,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Sua senha"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/material_dynamic_neutral40"
                 android:textColor="@color/black"
                 android:inputType="textPassword"
                 android:padding="16dp" />

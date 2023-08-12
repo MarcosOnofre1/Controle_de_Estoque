@@ -8,6 +8,7 @@
     tools:context=".autencacao.RecuperarContaActivity">
 
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,6 +26,22 @@
             android:gravity="center"
             android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/image_recuperar"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:paddingBottom="12dp"
+                android:src="@drawable/ic_email_enviar"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recupere sua senha instantaneamente. Enviamos a nova senha para o seu e-mail."
+                android:textColor="@color/white"
+                android:paddingBottom="24dp"
+                android:textSize="16dp"
+                android:gravity="center"/>
+
 
             <EditText
                 android:id="@+id/edit_email"
@@ -32,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit"
                 android:hint="Seu e-mail"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/material_dynamic_neutral40"
                 android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:padding="16dp"
@@ -42,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8sp"
-                android:padding="12dp"
+                android:padding="16dp"
                 android:onClick="recuperarSenha"
                 android:text="Recuperar Senha"
                 android:textColor="@color/white"
